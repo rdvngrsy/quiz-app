@@ -1,13 +1,12 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { AppDispatch } from "../../store/store";
-import { resetState, setQuestions } from "../../store/slices/answersSlice";
+import { resetState } from "../../store/slices/answersSlice";
 
 type Props = {};
 
-const Introduce = (props: Props) => {
-  const answersState = useSelector((state: any) => state.answers);
+const Introduce = ({}: Props) => {
   const dispatch = useDispatch<AppDispatch>();
 
   const navigate = useNavigate();

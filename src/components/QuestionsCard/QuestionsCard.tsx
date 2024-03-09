@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { QuestionsDataInfo } from "../../models/QuestionsData/questionsDataResponse";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../../store/store";
 import { setCorrectAnswers, setQuestions, setUserAnswer } from "../../store/slices/answersSlice";
-import { useNavigate } from "react-router-dom";
 import "./QuestionsCard.css"
 
 type Props = {
@@ -19,7 +18,6 @@ type Props = {
 const QuestionsCard = (props: Props) => {
   const [timer, setTimer] = useState(30);
   const answersState = useSelector((state: any) => state.answers);
-  const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
 
 

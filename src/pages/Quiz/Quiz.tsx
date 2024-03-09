@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import * as api from "../../api/api";
 import { useParams } from "react-router-dom";
 import QuestionsCards from "../../components/QuestionsCard/QuestionsCard";
@@ -7,7 +7,7 @@ import QuizResult from "../../components/QuizResult/QuizResult";
 
 type Props = {};
 
-const Quiz = (props: Props) => {
+const Quiz = ({}: Props) => {
   const { questions } = useParams();
   const [questionsData, setQuestionsData] = useState<QuestionsDataInfo[]>([]);
   const [score, setScore] = useState(0);
