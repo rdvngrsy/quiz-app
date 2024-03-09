@@ -25,7 +25,6 @@ const Quiz = ({}: Props) => {
     getData();
   }, []);
 
-  console.log(questionsData);
 
   return (
     <div className="">

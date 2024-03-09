@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# Quiz Uygulaması
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## :red_circle: [Test etmek için tıklayın.](https://rdvngrsy-quiz-app.netlify.app/) ↗
 
-Currently, two official plugins are available:
+Bu repo, React, Tailwind CSS, Redux Toolkit ve React Router DOM kullanılarak oluşturulan interaktif bir quiz uygulamasının kaynak kodlarını içerir.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Uygulama Özellikleri
 
-## Expanding the ESLint configuration
+- **Toplam 10 Soru**: Quiz, toplamda 10 sorudan oluşur ve her sorunun yalnızca bir doğru cevabı vardır.
+- **Zaman Sınırlı Sorular**: Her soru için ayrılan süre 30 saniyedir. İlk 10 saniye içinde cevap şıkları aktif olmayacak, 10. saniyeden sonra cevap verilebilecektir.
+- **Tek Seferlik Sorular**: Bir kere geçilen sorulara geri dönülmez, bu da kullanıcıların dikkatini ve hızını test eder.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Teknolojiler
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: Arayüz geliştirmek için kullanılan bir JavaScript kütüphanesidir.
+- **TypeScript**: JavaScript’e statik tip tanımlama özelliği kazandıran bir programlama dilidir.
+- **Redux Toolkit**: React için durum yönetimi kütüphanesidir.
+- **CSS**: Web sayfalarının görünümünü belirlemek için kullanılan bir stil dili ve tasarım sistemidir.
+- **Tailwind**: CSS sınıflarıyla hızlı ve kolay bir şekilde arayüz tasarlamaya olanak sağlayan bir kütüphanedir.
+- **React Router Dom**: React için sayfa yönlendirme kütüphanesidir.
+- **Axios**: HTTP istekleri yapmak için kullanılan bir kütüphanedir.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[![Teknolojiler](https://skillicons.dev/icons?i=react,typescript,redux,css,tailwind)](https://skillicons.dev)

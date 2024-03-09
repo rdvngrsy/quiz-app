@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { QuestionsDataInfo } from "../../models/QuestionsData/questionsDataResponse";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../store/store";
 import {
   setCorrectAnswers,
@@ -21,12 +21,10 @@ type Props = {
 
 const QuestionsCard = (props: Props) => {
   const [timer, setTimer] = useState(30);
-  const answersState = useSelector((state: any) => state.answers);
   const dispatch = useDispatch<AppDispatch>();
 
   const approvedChoice = (e: any) => {
-    //if (timer > 20) return;
-    console.log(e.currentTarget.value);
+    if (timer > 20) return;
     const checkAnswer =
       e.currentTarget.value == props.questionsData[props.count]?.correct_answer;
     if (checkAnswer) {
@@ -66,18 +64,16 @@ const QuestionsCard = (props: Props) => {
         setCorrectAnswers(props.questionsData[props.count].correct_answer)
       );
     }
-    console.log(props.count);
 
-    console.log(answersState);
   }, [props.count, props.questionsData]);
 
   return (
     <div>
       <div className="bg-white max-w-[1000px] w-full flex flex-col items-center p-8 rounded-3xl space-y-4 relative border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0)]">
         <div
-          className={`absolute mt-[-115px] bg-white w-40 h-40 font-bold text-[45px] flex justify-center items-center rounded-full border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] ${
+          className={`absolute mt-[-115px] w-40 h-40 font-bold text-[45px] flex justify-center items-center rounded-full border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0)] ${
             timer < 10
-              ? "bg-red-500 text-black heartbeat"
+              ? "bg-red-500 text-white heartbeat"
               : "bg-white text-black"
           }`}
         >
